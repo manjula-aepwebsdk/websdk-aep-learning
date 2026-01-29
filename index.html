@@ -1,71 +1,41 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-  "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="en">
+"http://www.w3.org/TR/html4/strict.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Manjula's Github page</title>
- 
-  <script type="text/javascript">
-    // Generate random Order ID
-    window.generateOrderId = function() {
-      return "ORD-" + Math.floor(Math.random() * 1000000);
-    };
- 
-    // Generate random User ID in format U12345
-    window.generateUserId = function() {
-      return "U" + Math.floor(10000 + Math.random() * 90000);
-    };
- 
-    window.digitalData = {
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <script>
+    var digitalData = digitalData || {};
+    function generateOrderId(){
+      return Math.floor(10000+Math.random() *90000);
+    }
+    digitalData = {
       page: {
-        pageName: document.title || "HomePage",
-        pageURL: window.location.href,
-        pagePath: window.location.pathname,
+        pagename: "HomePage",
         siteSection: "Landing",
-        pageType: "Demo",
-        language: "en",
-        siteSubSection: "",
-        server: window.location.hostname
+        siteSubsection: "",
+        server: ""
       },
- 
-      user: {
-        userId: window.generateUserId(),
-        userType: "Registered"
-      },
- 
-      marketing: {
-        channel: "Organic Search"
-      },
- 
       customer: {
         loginStatus: "LoggedIn"
       },
- 
-      orderDetails: {
-        type: "PrePaid",
-        id: window.generateOrderId()
-      },
- 
-      event: {
-        timestamp: new Date().toISOString()
+      OrderDetails: {
+        Type: "PrePaidonly",
+        ID: generateOrderId()
       }
+     
     };
-</script>
- 
-  <!-- Adobe Launch -->
-<script type="text/javascript"
-    <script src="https://assets.adobedtm.com/e72b4113c11a/3242734a02e5/launch-96fc114650f7-development.min.js" async></script>
-
-</script>
+  </script>
+<script src="https://assets.adobedtm.com/e72b4113c11a/3242734a02e5/launch-96fc114650f7-development.min.js" async></script>
+  
 </head>
- 
-<body>
-<h2>Adobe Analytics Demo Page</h2>
-<p>
-    This page has Adobe Analytics implemented via AEP WebSDK
-    for ACN LCT Training
-</p>
- 
-  <input type="button" id="demo-click-btn" value="Click Me" />
+  
+<title>Manjula's Github page</title>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" rightmargin="0" marginwidth="0" marginheight="0">
+<h1> Hi Boya Manjula</h1>
+  <h2> Welcome to the WAP AEP WEBSDK</h2>
+This Page has Adobe Analytics implemented via AEP webSDK for ACN LCT Training </br>
+
 </body>
 </html>
